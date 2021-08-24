@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var mainStackView: UIStackView!
+    
     //MARK: - Private properties
     private let username = "user"
     private let password = "pass"
@@ -24,6 +26,10 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         loginButton.layer.cornerRadius = 20
+        
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -35,9 +41,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func loginButtonPressed() {
-        if !isCredentialsCorrect() {
-            showAlert(with: "Wrong credentials", and: "Please check your input")
-        }
+        checkCredentials()
     }
     
     @IBAction func usernameHintButtonPressed() {
@@ -66,6 +70,28 @@ class LoginViewController: UIViewController {
         else { return false }
         return  username == self.username && password == self.password
     }
+    
+    private func checkCredentials() {
+        if !isCredentialsCorrect() {
+            showAlert(with: "Wrong credentials", and: "Please check your input")
+            passwordTextField.text = ""
+        } else {
+            performSegue(withIdentifier: "toWelcomeVC", sender: self)
+        }
+    }
+    
+    private func resetTextField() {
+        usernameTextField.text = ""
+        passwordTextField.text = ""
+    }
+}
+
+// MARK: - Work with keyboard
+extension LoginViewController {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
 }
 
 // MARK: - Navigation
@@ -77,7 +103,21 @@ extension LoginViewController {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        usernameTextField.text = ""
-        passwordTextField.text = ""
+        resetTextField()
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case usernameTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            checkCredentials()
+            textField.resignFirstResponder()
+        default:
+            textField.resignFirstResponder()
+        }
+        return true
     }
 }

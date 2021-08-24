@@ -32,13 +32,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="297" height="34"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXb-j6-QvP">
                                                 <rect key="frame" x="0.0" y="50" width="297" height="34"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -54,7 +54,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ggW-28-uXD"/>
-                                                    <segue destination="3nx-VV-DkX" kind="presentation" identifier="toWelcomeVC" id="1vc-2p-b1E"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yCk-5a-dE8">
@@ -98,6 +97,7 @@
                         <outlet property="loginButton" destination="QjR-1T-soh" id="vmT-2D-qGe"/>
                         <outlet property="passwordTextField" destination="ZXb-j6-QvP" id="W7y-HM-93K"/>
                         <outlet property="usernameTextField" destination="030-XX-MT2" id="al0-8y-Eqe"/>
+                        <segue destination="3nx-VV-DkX" kind="presentation" identifier="toWelcomeVC" id="VSD-3k-Jrp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
