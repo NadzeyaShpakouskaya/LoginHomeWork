@@ -8,22 +8,25 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    // MARK: - IBOutlets
+    @IBOutlet weak var welcomeUserLabel: UILabel!
+    
+    @IBOutlet weak var logoutButton: UIButton!
+    
+    // MARK: - Public properties
+    var username: String?
+    
+    // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        logoutButton.layer.cornerRadius = 20
+        setUpWelcomeMessage()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setUpWelcomeMessage() {
+        guard let username = username else { return }
+        welcomeUserLabel.text = String("Welcome, \(username)!")
     }
-    */
 
 }
