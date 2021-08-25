@@ -16,17 +16,37 @@ class WelcomeViewController: UIViewController {
     // MARK: - Public properties
     var username: String?
     
+    // MARK: - Private properties
+    private var gradientLayer: CAGradientLayer! {
+        didSet {
+            gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+            gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+            gradientLayer.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
+        }
+    }
+    
     // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         logoutButton.layer.cornerRadius = 20
+        
+        // gradient
+        gradientLayer = CAGradientLayer()
+        view.layer.insertSublayer(gradientLayer, at: 0)
+        
         setUpWelcomeMessage()
     }
-
+    
+    override func viewDidLayoutSubviews() {
+        let width = self.view.bounds.size.width
+        let height = self.view.bounds.size.height
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: width, height: height)
+    }
+    
+    // MARK: - Private methods
     private func setUpWelcomeMessage() {
         guard let username = username else { return }
         welcomeUserLabel.text = String("Welcome, \(username)!")
     }
-
 }
