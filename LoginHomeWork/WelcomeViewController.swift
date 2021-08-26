@@ -47,6 +47,6 @@ class WelcomeViewController: UIViewController {
     // MARK: - Private methods
     private func setUpWelcomeMessage() {
         guard let username = username else { return }
-        welcomeUserLabel.text = String("Welcome, \(username)!")
+        welcomeUserLabel.text = "Welcome, \(username)!"
     }
 }

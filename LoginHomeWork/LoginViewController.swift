@@ -31,10 +31,6 @@ class LoginViewController: UIViewController {
         addObservers()
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-            return isCredentialsCorrect()
-    }
-    
     // MARK: - IBActions
     @IBAction func loginButtonPressed() {
         checkCredentials()
@@ -72,15 +68,10 @@ class LoginViewController: UIViewController {
             showAlert(with: "Wrong credentials", and: "Please check your input")
             passwordTextField.text = ""
         } else {
-            performSegue(withIdentifier: "toWelcomeVC", sender: self)
+            performSegue(withIdentifier: "toWelcomeVC", sender: nil)
         }
     }
-    
-    private func resetTextField() {
-        usernameTextField.text = ""
-        passwordTextField.text = ""
-    }
-    
+
     private func addObservers() {
         NotificationCenter.default.addObserver(
             self,
@@ -119,15 +110,10 @@ extension LoginViewController {
     
     
     @objc  func keyboardWillHide(notification: NSNotification) {
-        guard let userInfo = notification.userInfo else { return }
-        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey]
-                as? NSValue else { return }
-        let kbSize = keyboardSize.cgRectValue
-        
         // we need to check frame origin y position,
         // cause we use switching between textfields
         if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y += kbSize.height
+            self.view.frame.origin.y = 0
         }
     }
 }
@@ -141,20 +127,17 @@ extension LoginViewController {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        resetTextField()
+        passwordTextField.text = ""
+        usernameTextField.text = ""
     }
 }
 
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        switch textField {
-        case usernameTextField:
+        if textField == usernameTextField {
             passwordTextField.becomeFirstResponder()
-        case passwordTextField:
-            checkCredentials()
-            textField.resignFirstResponder()
-        default:
-            textField.resignFirstResponder()
+        } else {
+            loginButtonPressed()
         }
         return true
     }
