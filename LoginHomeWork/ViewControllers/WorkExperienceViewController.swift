@@ -30,11 +30,14 @@ class WorkExperienceViewController: UIViewController {
         for place in workPlaces {
             let text =
             """
-            \(place.company.capitalized)
-            \(place.position)
-            \(place.dateOfStart) - \(place.dateOfFinishing)
-            \(place.description)
-            =======================\n
+            Company: \(place.company.capitalized)
+            
+            Position: \(place.position)
+            Period: \(place.dateOfStart) - \(place.dateOfFinishing)
+            Description: \(place.description)
+            
+            =======================
+            
             """
             description += text
         }
@@ -49,10 +52,12 @@ class WorkExperienceViewController: UIViewController {
             let text =
             """
             \(certificate.title)
-            \(certificate.dateOfIssue)
-            \(certificate.company)
-            \(certificate.certificateLink)
-            =======================\n
+            Date of issue: \(certificate.dateOfIssue)
+            Issued by: \(certificate.company)
+            Link: \(certificate.certificateLink)
+            
+            =======================
+            
             """
             description += text
         }

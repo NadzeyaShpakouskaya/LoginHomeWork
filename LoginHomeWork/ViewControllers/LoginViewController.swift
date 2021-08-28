@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
             sex: .female,
             dateOfBirth: "27 Sept. 1987",
             address: "Dubai, UAE",
-            photoLink: "photo",
+            photoLink: "photos",
             contactInfo: ContactInfo(
                 phoneNumber: "+12345667",
                 email: "test@gmail.com"),
@@ -76,7 +76,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loginButton.layer.cornerRadius = 20
+        loginButton.layer.cornerRadius = 10
         
         usernameTextField.delegate = self
         passwordTextField.delegate = self
@@ -137,11 +137,10 @@ extension LoginViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController,
               let viewControllers = tabBarController.viewControllers else { return }
-        print(viewControllers)
+        
         let person = user.personalInfo
         
         for viewController in viewControllers {
-   
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.fullName = "\(person.name) \(person.surname)"
             }  else if let workExperienceVC = viewController as? WorkExperienceViewController {

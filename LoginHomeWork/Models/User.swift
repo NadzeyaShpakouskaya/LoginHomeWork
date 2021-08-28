@@ -19,11 +19,11 @@ struct Person {
     let sex: Gender
     let dateOfBirth: String
     let address: String
-    let photoLink: String
+    let photoLink: String?
     let contactInfo: ContactInfo
-    let workPlaces: [WorkPlace]
-    let education: [Education]
-    let courses: [Certificate]
+    let workPlaces: [WorkPlace]?
+    let education: [Education]?
+    let courses: [Certificate]?
     let hobby: String
 }
 struct ContactInfo {
@@ -63,7 +63,7 @@ enum LevelDegree: String {
     case doctor = "Doctor's degree"
 }
 
-enum Gender {
+enum Gender: String {
     case male, female
 }
 

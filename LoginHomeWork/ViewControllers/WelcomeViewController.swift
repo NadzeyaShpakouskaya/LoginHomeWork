@@ -14,7 +14,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var logoutButton: UIButton!
     
     // MARK: - Public properties
-    var fullName: String?
+    var fullName: String!
     
     // MARK: - Private properties
     private var gradientLayer: CAGradientLayer! {
@@ -44,7 +44,7 @@ class WelcomeViewController: UIViewController {
     
     // MARK: - Private methods
     private func setUpWelcomeMessage() {
-        guard let name = fullName else { return }
-        welcomeUserLabel.text = "Welcome, \(name)!"
+//        guard let name = fullName else { return }
+        welcomeUserLabel.text = "Welcome, " + fullName + " !"
     }
 }

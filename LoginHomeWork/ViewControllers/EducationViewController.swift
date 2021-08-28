@@ -28,9 +28,10 @@ class EducationViewController: UIViewController {
             let text =
             """
             \(degree.name)\t\t\(degree.dateOfStart) - \(degree.dateOfFinishing)
-            \(degree.specialization)
-            \(degree.levelDegree.rawValue)
-            =======================\n
+            \(degree.specialization), \(degree.levelDegree.rawValue)
+            
+            =======================
+            
             """
             description += text
         }
