@@ -18,6 +18,8 @@
 		FDDAA53126DA2C9300370E26 /* WorkExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA53026DA2C9300370E26 /* WorkExperienceViewController.swift */; };
 		FDDAA53326DA2CA800370E26 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA53226DA2CA800370E26 /* PersonalInfoViewController.swift */; };
 		FDDAA53526DA2CD800370E26 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA53426DA2CD800370E26 /* EducationViewController.swift */; };
+		FDDAA53726DA73B500370E26 /* ExperienceDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA53626DA73B500370E26 /* ExperienceDetailedViewController.swift */; };
+		FDDAA53926DA73C500370E26 /* CertificatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA53826DA73C500370E26 /* CertificatesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		FDDAA53026DA2C9300370E26 /* WorkExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceViewController.swift; sourceTree = "<group>"; };
 		FDDAA53226DA2CA800370E26 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		FDDAA53426DA2CD800370E26 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		FDDAA53626DA73B500370E26 /* ExperienceDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceDetailedViewController.swift; sourceTree = "<group>"; };
+		FDDAA53826DA73C500370E26 /* CertificatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				FDDAA53026DA2C9300370E26 /* WorkExperienceViewController.swift */,
 				FDDAA53226DA2CA800370E26 /* PersonalInfoViewController.swift */,
 				FDDAA53426DA2CD800370E26 /* EducationViewController.swift */,
+				FDDAA53626DA73B500370E26 /* ExperienceDetailedViewController.swift */,
+				FDDAA53826DA73C500370E26 /* CertificatesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -198,7 +204,9 @@
 				FDDAA53526DA2CD800370E26 /* EducationViewController.swift in Sources */,
 				FDDAA53126DA2C9300370E26 /* WorkExperienceViewController.swift in Sources */,
 				FDDAA53326DA2CA800370E26 /* PersonalInfoViewController.swift in Sources */,
+				FDDAA53926DA73C500370E26 /* CertificatesViewController.swift in Sources */,
 				FDDAA52F26D9FEE900370E26 /* User.swift in Sources */,
+				FDDAA53726DA73B500370E26 /* ExperienceDetailedViewController.swift in Sources */,
 				FDDAA4D226D4C7E400370E26 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

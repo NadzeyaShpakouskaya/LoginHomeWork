@@ -27,8 +27,12 @@ class EducationViewController: UIViewController {
         for degree in degrees {
             let text =
             """
-            \(degree.name)\t\t\(degree.dateOfStart) - \(degree.dateOfFinishing)
-            \(degree.specialization), \(degree.levelDegree.rawValue)
+            
+            \(degree.name)
+            Period:\t\(degree.dateOfStart) - \(degree.dateOfFinishing)
+            
+            Specialization:\t\(degree.specialization)
+            Level:\t\(degree.levelDegree.rawValue)
             
             =======================
             

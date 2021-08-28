@@ -12,6 +12,9 @@ class WorkExperienceViewController: UIViewController {
     @IBOutlet weak var workDescriptionLabel: UILabel!
     @IBOutlet weak var certificatesDescriptionLabel: UILabel!
     
+    @IBOutlet weak var experienceDetailedButton: UIButton!
+    @IBOutlet weak var certificateDetailedButton: UIButton!
+    
     // MARK: - Public properties
     var workPlaces: [WorkPlace]?
     var certificates: [Certificate]?
@@ -21,6 +24,15 @@ class WorkExperienceViewController: UIViewController {
         super.viewDidLoad()
         setUpWorkInfo()
         setUpCertificatesInfo()
+        setUpButtons()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let workVC = segue.destination as? ExperienceDetailedViewController {
+            workVC.workPlaces = workPlaces
+        } else if let certificatesVC = segue.destination as? CertificatesViewController {
+            certificatesVC.certificates = certificates
+        }
     }
     
     // MARK: - Private methods
@@ -30,14 +42,9 @@ class WorkExperienceViewController: UIViewController {
         for place in workPlaces {
             let text =
             """
-            Company: \(place.company.capitalized)
-            
-            Position: \(place.position)
-            Period: \(place.dateOfStart) - \(place.dateOfFinishing)
-            Description: \(place.description)
-            
-            =======================
-            
+            ►\tCompany:\t\(place.company.capitalized)
+            \tPosition:\t\(place.position)
+            \n
             """
             description += text
         }
@@ -49,20 +56,14 @@ class WorkExperienceViewController: UIViewController {
         guard let certificateInfo = certificates else { return }
         var description = ""
         for certificate in certificateInfo {
-            let text =
-            """
-            \(certificate.title)
-            Date of issue: \(certificate.dateOfIssue)
-            Issued by: \(certificate.company)
-            Link: \(certificate.certificateLink)
-            
-            =======================
-            
-            """
+            let text = " • \(certificate.title)\n"
             description += text
         }
         certificatesDescriptionLabel.text = description
     }
     
-
+    private func setUpButtons() {
+        experienceDetailedButton.layer.cornerRadius = 10
+        certificateDetailedButton.layer.cornerRadius = 10
+    }
 }

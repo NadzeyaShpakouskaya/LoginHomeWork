@@ -15,8 +15,10 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
-    // MARK: - Public properties
-    let user = User(
+    // MARK: - Private properties
+    
+    //test data
+    private let user = User(
         username: "user",
         password: "pass",
         personalInfo: Person(
@@ -25,7 +27,7 @@ class LoginViewController: UIViewController {
             sex: .female,
             dateOfBirth: "27 Sept. 1987",
             address: "Dubai, UAE",
-            photoLink: "photos",
+            photoLink: "photo",
             contactInfo: ContactInfo(
                 phoneNumber: "+12345667",
                 email: "test@gmail.com"),
@@ -65,12 +67,8 @@ class LoginViewController: UIViewController {
                             certificateLink: "https://somelink",
                             dateOfIssue: "18 August 2021")
             ],
-            hobby: "Traveling, spend time with family, play cardboard games, watch movies and TV Shows")
+            hobby: "I like to travel, spend time with family, play cardboard games, watch movies and TV Shows")
     )
-    
-    //MARK: - Private properties
-    private let username = "user"
-    private let password = "pass"
     
     // MARK: - Override methods
     override func viewDidLoad() {
@@ -88,11 +86,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func usernameHintButtonPressed() {
-        showAlert(with: "Username hint:", and: username)
+        showAlert(with: "Username hint:", and: user.username)
     }
     
     @IBAction func passwordHintButtonPressed() {
-        showAlert(with: "Password hint:", and: password)
+        showAlert(with: "Password hint:", and: user.password)
     }
     
     // MARK: - Private methods
@@ -111,7 +109,7 @@ class LoginViewController: UIViewController {
         guard let username = usernameTextField.text,
               let password = passwordTextField.text
         else { return false }
-        return  username == self.username && password == self.password
+        return  username == user.username && password == user.password
     }
     
     private func checkCredentials() {
@@ -147,8 +145,9 @@ extension LoginViewController {
                 workExperienceVC.certificates = person.courses
                 workExperienceVC.workPlaces = person.workPlaces
             } else if let navController = viewController as? UINavigationController {
-                let personVC = navController.topViewController as? PersonalInfoViewController
-                personVC?.person = user.personalInfo
+                navController.navigationBar.topItem?.title = "\(person.name) \(person.surname)"
+                let personVC = navController.topViewController as! PersonalInfoViewController
+                personVC.person = user.personalInfo
             }
         }
     }

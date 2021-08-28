@@ -35,8 +35,6 @@ class PersonalInfoViewController: UIViewController {
         photo.layer.cornerRadius = 10
         
         setUpLabels()
-        
-        self.title = "\(person.name) \(person.surname)"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
