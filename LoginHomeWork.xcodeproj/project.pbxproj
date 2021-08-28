@@ -14,6 +14,10 @@
 		FDDAA4DC26D4C7E500370E26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDAA4DA26D4C7E500370E26 /* LaunchScreen.storyboard */; };
 		FDDAA4E426D4C8CD00370E26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA4E326D4C8CD00370E26 /* LoginViewController.swift */; };
 		FDDAA4E626D4C8E500370E26 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA4E526D4C8E500370E26 /* WelcomeViewController.swift */; };
+		FDDAA52F26D9FEE900370E26 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA52E26D9FEE900370E26 /* User.swift */; };
+		FDDAA53126DA2C9300370E26 /* WorkExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA53026DA2C9300370E26 /* WorkExperienceViewController.swift */; };
+		FDDAA53326DA2CA800370E26 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA53226DA2CA800370E26 /* PersonalInfoViewController.swift */; };
+		FDDAA53526DA2CD800370E26 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA53426DA2CD800370E26 /* EducationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		FDDAA4DD26D4C7E500370E26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDDAA4E326D4C8CD00370E26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FDDAA4E526D4C8E500370E26 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		FDDAA52E26D9FEE900370E26 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FDDAA53026DA2C9300370E26 /* WorkExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceViewController.swift; sourceTree = "<group>"; };
+		FDDAA53226DA2CA800370E26 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		FDDAA53426DA2CD800370E26 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,9 @@
 			children = (
 				FDDAA4E326D4C8CD00370E26 /* LoginViewController.swift */,
 				FDDAA4E526D4C8E500370E26 /* WelcomeViewController.swift */,
+				FDDAA53026DA2C9300370E26 /* WorkExperienceViewController.swift */,
+				FDDAA53226DA2CA800370E26 /* PersonalInfoViewController.swift */,
+				FDDAA53426DA2CD800370E26 /* EducationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -106,6 +117,7 @@
 		FDDAA52D26D9F55B00370E26 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FDDAA52E26D9FEE900370E26 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +195,10 @@
 				FDDAA4E426D4C8CD00370E26 /* LoginViewController.swift in Sources */,
 				FDDAA4E626D4C8E500370E26 /* WelcomeViewController.swift in Sources */,
 				FDDAA4D026D4C7E400370E26 /* AppDelegate.swift in Sources */,
+				FDDAA53526DA2CD800370E26 /* EducationViewController.swift in Sources */,
+				FDDAA53126DA2C9300370E26 /* WorkExperienceViewController.swift in Sources */,
+				FDDAA53326DA2CA800370E26 /* PersonalInfoViewController.swift in Sources */,
+				FDDAA52F26D9FEE900370E26 /* User.swift in Sources */,
 				FDDAA4D226D4C7E400370E26 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
