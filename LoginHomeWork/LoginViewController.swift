@@ -27,8 +27,6 @@ class LoginViewController: UIViewController {
         
         usernameTextField.delegate = self
         passwordTextField.delegate = self
-        
-        addObservers()
     }
     
     // MARK: - IBActions
@@ -71,50 +69,13 @@ class LoginViewController: UIViewController {
             performSegue(withIdentifier: "toWelcomeVC", sender: nil)
         }
     }
-
-    private func addObservers() {
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillShow),
-            name: UIResponder.keyboardWillShowNotification,
-            object: nil
-        )
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillHide),
-            name: UIResponder.keyboardWillHideNotification,
-            object: nil
-        )
-    }
 }
 
 // MARK: - Work with keyboard
 extension LoginViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
-    }
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-        guard let userInfo = notification.userInfo else { return }
-        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey]
-                as? NSValue else { return }
-        let kbSize = keyboardSize.cgRectValue
-        
-        // we need to check frame origin y position,
-        // cause we use switching between textfields
-        if self.view.frame.origin.y == 0 {
-            self.view.frame.origin.y -= kbSize.height
-        }
-    }
-    
-    
-    @objc  func keyboardWillHide(notification: NSNotification) {
-        // we need to check frame origin y position,
-        // cause we use switching between textfields
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
-        }
     }
 }
 
