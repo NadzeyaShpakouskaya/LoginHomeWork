@@ -34,12 +34,13 @@ class ExperienceDetailedViewController: UIViewController {
         for place in workPlaces {
             let text =
             """
-            Company:\t\(place.company.capitalized)
+            Company:  \(place.company.capitalized)
             
-            Position:\t\(place.position)
-            Period:\t\(place.dateOfStart) - \(place.dateOfFinishing)
+            Position:  \(place.position)
+            Period:  \(place.dateOfStart) - \(place.dateOfFinishing)
             
-            Description:\t\(place.description)
+            Description:
+            \(place.description)
             
             =======================\n\n
             """

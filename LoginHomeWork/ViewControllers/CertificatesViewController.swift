@@ -36,9 +36,9 @@ class CertificatesViewController: UIViewController {
             """
             \(certificate.title)
             
-            Date of issue:\t\(certificate.dateOfIssue)
-            Issued by:\t\(certificate.company)
-            Link:\t\(certificate.certificateLink)
+            Date of issue:  \(certificate.dateOfIssue)
+            Issued by:  \(certificate.company)
+            Link:  \(certificate.certificateLink)
             \n=======================\n\n
             """
             description += text

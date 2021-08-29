@@ -61,7 +61,7 @@ class PersonalInfoViewController: UIViewController {
         if let degrees = person.education {
             
             for degree in degrees {
-                let text = "\(degree.name), \(degree.specialization)\n\n"
+                let text = "\n\(degree.name), \(degree.specialization)\n"
                 description += text
             }
         }

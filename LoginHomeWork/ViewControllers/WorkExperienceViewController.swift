@@ -42,8 +42,8 @@ class WorkExperienceViewController: UIViewController {
         for place in workPlaces {
             let text =
             """
-            ►\tCompany:\t\(place.company.capitalized)
-            \tPosition:\t\(place.position)
+            ►\tCompany:  \(place.company.capitalized)
+            \tPosition:  \(place.position)
             \n
             """
             description += text
