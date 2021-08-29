@@ -14,14 +14,12 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var logoutButton: UIButton!
     
     // MARK: - Public properties
-    var username: String?
+    var fullName: String!
     
     // MARK: - Private properties
     private var gradientLayer: CAGradientLayer! {
         didSet {
-            gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-            gradientLayer.endPoint = CGPoint(x: 1, y: 1)
-            gradientLayer.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
+            gradientLayer.colors = [UIColor.darkGray.cgColor, UIColor.lightGray.cgColor]
         }
     }
     
@@ -46,7 +44,7 @@ class WelcomeViewController: UIViewController {
     
     // MARK: - Private methods
     private func setUpWelcomeMessage() {
-        guard let username = username else { return }
-        welcomeUserLabel.text = "Welcome, \(username)!"
+//        guard let name = fullName else { return }
+        welcomeUserLabel.text = "Welcome, " + fullName + " !"
     }
 }

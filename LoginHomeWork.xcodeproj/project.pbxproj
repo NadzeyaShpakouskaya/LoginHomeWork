@@ -14,6 +14,12 @@
 		FDDAA4DC26D4C7E500370E26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDAA4DA26D4C7E500370E26 /* LaunchScreen.storyboard */; };
 		FDDAA4E426D4C8CD00370E26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA4E326D4C8CD00370E26 /* LoginViewController.swift */; };
 		FDDAA4E626D4C8E500370E26 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA4E526D4C8E500370E26 /* WelcomeViewController.swift */; };
+		FDDAA52F26D9FEE900370E26 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA52E26D9FEE900370E26 /* User.swift */; };
+		FDDAA53126DA2C9300370E26 /* WorkExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA53026DA2C9300370E26 /* WorkExperienceViewController.swift */; };
+		FDDAA53326DA2CA800370E26 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA53226DA2CA800370E26 /* PersonalInfoViewController.swift */; };
+		FDDAA53526DA2CD800370E26 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA53426DA2CD800370E26 /* EducationViewController.swift */; };
+		FDDAA53726DA73B500370E26 /* ExperienceDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA53626DA73B500370E26 /* ExperienceDetailedViewController.swift */; };
+		FDDAA53926DA73C500370E26 /* CertificatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAA53826DA73C500370E26 /* CertificatesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		FDDAA4DD26D4C7E500370E26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDDAA4E326D4C8CD00370E26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FDDAA4E526D4C8E500370E26 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		FDDAA52E26D9FEE900370E26 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FDDAA53026DA2C9300370E26 /* WorkExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceViewController.swift; sourceTree = "<group>"; };
+		FDDAA53226DA2CA800370E26 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		FDDAA53426DA2CD800370E26 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		FDDAA53626DA73B500370E26 /* ExperienceDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceDetailedViewController.swift; sourceTree = "<group>"; };
+		FDDAA53826DA73C500370E26 /* CertificatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +70,62 @@
 		FDDAA4CE26D4C7E400370E26 /* LoginHomeWork */ = {
 			isa = PBXGroup;
 			children = (
-				FDDAA4CF26D4C7E400370E26 /* AppDelegate.swift */,
-				FDDAA4D126D4C7E400370E26 /* SceneDelegate.swift */,
-				FDDAA4D526D4C7E400370E26 /* Main.storyboard */,
-				FDDAA4E326D4C8CD00370E26 /* LoginViewController.swift */,
-				FDDAA4E526D4C8E500370E26 /* WelcomeViewController.swift */,
-				FDDAA4D826D4C7E500370E26 /* Assets.xcassets */,
-				FDDAA4DA26D4C7E500370E26 /* LaunchScreen.storyboard */,
-				FDDAA4DD26D4C7E500370E26 /* Info.plist */,
+				FDDAA52B26D9F4E700370E26 /* ViewControllers */,
+				FDDAA52D26D9F55B00370E26 /* Models */,
+				FDDAA52A26D9F4D400370E26 /* Strotyboards */,
+				FDDAA52C26D9F50100370E26 /* Resources */,
+				FDDAA52926D9F48A00370E26 /* App */,
 			);
 			path = LoginHomeWork;
+			sourceTree = "<group>";
+		};
+		FDDAA52926D9F48A00370E26 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FDDAA4CF26D4C7E400370E26 /* AppDelegate.swift */,
+				FDDAA4D126D4C7E400370E26 /* SceneDelegate.swift */,
+				FDDAA4DD26D4C7E500370E26 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FDDAA52A26D9F4D400370E26 /* Strotyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FDDAA4D526D4C7E400370E26 /* Main.storyboard */,
+				FDDAA4DA26D4C7E500370E26 /* LaunchScreen.storyboard */,
+			);
+			path = Strotyboards;
+			sourceTree = "<group>";
+		};
+		FDDAA52B26D9F4E700370E26 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FDDAA4E326D4C8CD00370E26 /* LoginViewController.swift */,
+				FDDAA4E526D4C8E500370E26 /* WelcomeViewController.swift */,
+				FDDAA53026DA2C9300370E26 /* WorkExperienceViewController.swift */,
+				FDDAA53226DA2CA800370E26 /* PersonalInfoViewController.swift */,
+				FDDAA53426DA2CD800370E26 /* EducationViewController.swift */,
+				FDDAA53626DA73B500370E26 /* ExperienceDetailedViewController.swift */,
+				FDDAA53826DA73C500370E26 /* CertificatesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FDDAA52C26D9F50100370E26 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FDDAA4D826D4C7E500370E26 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FDDAA52D26D9F55B00370E26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDDAA52E26D9FEE900370E26 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +201,12 @@
 				FDDAA4E426D4C8CD00370E26 /* LoginViewController.swift in Sources */,
 				FDDAA4E626D4C8E500370E26 /* WelcomeViewController.swift in Sources */,
 				FDDAA4D026D4C7E400370E26 /* AppDelegate.swift in Sources */,
+				FDDAA53526DA2CD800370E26 /* EducationViewController.swift in Sources */,
+				FDDAA53126DA2C9300370E26 /* WorkExperienceViewController.swift in Sources */,
+				FDDAA53326DA2CA800370E26 /* PersonalInfoViewController.swift in Sources */,
+				FDDAA53926DA73C500370E26 /* CertificatesViewController.swift in Sources */,
+				FDDAA52F26D9FEE900370E26 /* User.swift in Sources */,
+				FDDAA53726DA73B500370E26 /* ExperienceDetailedViewController.swift in Sources */,
 				FDDAA4D226D4C7E400370E26 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93336KV4Q7;
-				INFOPLIST_FILE = LoginHomeWork/Info.plist;
+				INFOPLIST_FILE = LoginHomeWork/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +375,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93336KV4Q7;
-				INFOPLIST_FILE = LoginHomeWork/Info.plist;
+				INFOPLIST_FILE = LoginHomeWork/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
